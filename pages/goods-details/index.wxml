@@ -21,12 +21,12 @@
     <view class="goods-info">
       <view class="goods-info-top-container">
         <view class="goods-profile">
-          <view class="p"><text>¥</text> {{selectSizePrice}}</view>
+          <view class="p"><text>$</text> {{selectSizePrice}}</view>
           <view wx:if="{{goodsDetail.basicInfo.originalPrice && goodsDetail.basicInfo.originalPrice > 0}}"
             class="goods-price" style='color:#aaa;text-decoration:line-through;padding: 15rpx 0rpx 0rpx 15rpx;'>
-            <text>¥</text> {{selectSizeOPrice}}</view>
+            <text>$</text> {{selectSizeOPrice}}</view>
         </view>
-        <view class="goods-info-fx">
+        <!-- <view class="goods-info-fx">
           <view class='item left'>
             <van-icon name="share-o" size="24px" />
             <view class="icon-title">分享</view>
@@ -36,7 +36,7 @@
             <van-icon name="qr" size="24px"/>
             <view class="icon-title">二维码</view>            
           </view>
-        </view>
+        </view> -->
       </view>
       <view class="goods-title">{{goodsDetail.basicInfo.name}}</view>
       <view class="characteristic">{{goodsDetail.basicInfo.characteristic}}</view>
@@ -195,7 +195,7 @@
       </view>
     </view>
   </scroll-view>
-  <van-goods-action wx:if="{{!curGoodsKanjia}}">
+  <!-- <van-goods-action wx:if="{{!curGoodsKanjia}}">
     <van-goods-action-icon icon="chat-o" text="客服" open-type="contact"
       send-message-title="{{goodsDetail.basicInfo.name}}" send-message-img="{{goodsDetail.basicInfo.pic}}"
       send-message-path="/pages/goods-details/index?id={{goodsDetail.basicInfo.id}}" show-message-card="{{ true }}" />
@@ -208,7 +208,7 @@
     <van-goods-action-button wx:if="{{goodsDetail.basicInfo.pingtuan}}" text="单独购买" type="warning"
       bind:click="tobuy" />
     <van-goods-action-button wx:if="{{goodsDetail.basicInfo.pingtuan}}" text="发起拼团" bind:click="toPingtuan" />
-  </van-goods-action>
+  </van-goods-action> -->
 </view>
 
 <block wx:if="{{posterShow}}">

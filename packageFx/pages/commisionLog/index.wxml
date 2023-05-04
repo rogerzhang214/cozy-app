@@ -16,7 +16,7 @@
 <view class="btn-box">
   <van-button type="primary" block bind:click="getCommisionLog">搜索</van-button>
 </view> -->
-<!-- <van-cell wx:if="{{orderList && orderList.length > 0}}" title="销售总额" value="¥{{ aggregate.sum_sale_amount }}" /> -->
+<!-- <van-cell wx:if="{{orderList && orderList.length > 0}}" title="销售总额" value="${{ aggregate.sum_sale_amount }}" /> -->
 <view class="container">
   <van-empty wx:if="{{!orderList || orderList.length == 0}}" description="暂无订单" />
   <view class="order-list" hidden="{{orderList.length>0 ? false : true}}">
@@ -41,8 +41,8 @@
       </van-card>
       <view class="goods-price">
         共 {{item.goodsNumber}} 件商品 合计：
-        <text class="p" wx:if="{{item.score <= 0}}">¥ {{item.amountReal}}</text>
-        <text class="p" wx:if="{{item.score > 0}}">¥ {{item.amountReal}} + {{item.score}} 积分</text>
+        <text class="p" wx:if="{{item.score <= 0}}">$ {{item.amountReal}}</text>
+        <text class="p" wx:if="{{item.score > 0}}">$ {{item.amountReal}} + {{item.score}} 积分</text>
         ，累计佣金 <text class="p" wx:if="{{item.score <= 0}}">{{item.totalCommision}}</text>
       </view>
       <van-cell wx:if="{{ userInviter[item.goodsList[0].commisionRecord.uids] }}" title="销售员:{{ userInviter[item.goodsList[0].commisionRecord.uids].nick }}" />

@@ -246,13 +246,22 @@ Page({
       "mask": true
     })
     // https://www.yuque.com/apifm/nu0f75/wg5t98
-    const res = await WXAPI.goodsv2({
+    let res = await WXAPI.goodsv2({
       categoryId: categoryId,
       page: this.data.curPage,
       pageSize: this.data.pageSize
     })
     wx.hideLoading()
-    if (res.code == 404 || res.code == 700) {
+    if (res.code == -3) {
+      setTimeout (() => {
+      }, 1000);
+      res = await WXAPI.goodsv2({
+        categoryId: categoryId,
+        page: this.data.curPage,
+        pageSize: this.data.pageSize
+      })
+    }
+    else if (res.code == 404 || res.code == 700) {
       let newData = {
         loadingMoreHidden: false
       }

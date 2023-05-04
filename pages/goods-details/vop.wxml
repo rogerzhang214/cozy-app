@@ -18,9 +18,9 @@
     <view class="goods-info vcell">
       <view class="goods-info-top-container">
         <view class="goods-profile">
-          <view class="p"><text>¥</text> {{price.priceSale}}</view>
+          <view class="p"><text>$</text> {{price.priceSale}}</view>
           <view wx:if="{{price.priceJd && price.priceJd > 0}}" class="goods-price"
-            style='color:#aaa;text-decoration:line-through;padding: 15rpx 0rpx 0rpx 15rpx;'><text>¥</text>
+            style='color:#aaa;text-decoration:line-through;padding: 15rpx 0rpx 0rpx 15rpx;'><text>$</text>
             {{price.priceJd}}</view>
         </view>
         <view class="goods-info-fx">

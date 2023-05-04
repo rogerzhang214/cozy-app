@@ -29,7 +29,7 @@
                   {{option.pname}}:{{option.name}}
                 </block>
               </view>
-              <view class="goods-price">¥ {{item.price}}</view>
+              <view class="goods-price">$ {{item.price}}</view>
               <view class="buy-num">
                 <view class="jian-btn" catchtap="jianBtnTap" data-index="{{index}}">-</view>
                 <input type="number" value="{{item.number}}" data-key="{{item.key}}" bindinput="changeCarNumber" />
@@ -70,7 +70,7 @@
                 {{option.pname}}:{{option.name}}
               </block>
             </view>
-            <view class="goods-price">¥ {{item.price}}</view>
+            <view class="goods-price">$ {{item.price}}</view>
             <view class="buy-num">
               <view class="jian-btn" catchtap="jianBtnTap" data-index="{{index}}">-</view>
               <input type="number" value="{{item.number}}" data-key="{{item.key}}" bindinput="changeCarNumber" />
@@ -90,8 +90,8 @@
   </view>
   <view class="jiesuan-box">
     <view class="left-price">
-      <view wx:if="{{ score }}" class="total">合计：¥ {{price}} + {{score}} 积分</view>
-      <view wx:else class="total">合计：¥ {{price}}</view>
+      <view wx:if="{{ score }}" class="total">合计：$ {{price}} + {{score}} 积分</view>
+      <view wx:else class="total">合计：$ {{price}}</view>
     </view>
     <view class="to-pay-btn">
       <navigator url="/pages/to-pay-order/index?shopCarType={{shopCarType}}">去结算</navigator>

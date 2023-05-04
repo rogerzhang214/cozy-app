@@ -17,7 +17,7 @@
     <van-cell
       title-style="flex:2"
       title="成交额"
-      value="¥{{ item.totalPayAmount ? item.totalPayAmount : 0}}"
+      value="${{ item.totalPayAmount ? item.totalPayAmount : 0}}"
     />
     <van-cell
       title-style="flex:2"

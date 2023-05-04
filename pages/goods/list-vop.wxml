@@ -19,7 +19,7 @@
     <navigator url="/pages/goods-details/vop?id={{item.skuId}}"><image class="img" mode="aspectFill" src="{{item.pic}}"></image></navigator>
     <view class="goods-info">
       <view class="title ellipsis"><navigator url="/pages/goods-details/vop?id={{item.skuId}}">{{item.skuName}}</navigator></view>
-      <view class="price" style="margin-top: 24rpx;">¥ {{item.priceSale}}</view>
+      <view class="price" style="margin-top: 24rpx;">$ {{item.priceSale}}</view>
       <!-- <view class="buy-info">
         <view class="num">已售出{{item.numberSells}}件</view>
         <image class="car" src="/images/icon/car.svg" data-id="{{item.skuId}}" bindtap="addShopCar"></image>
@@ -32,7 +32,7 @@
     <navigator url="/pages/goods-details/vop?id={{item.skuId}}"><image class="img" mode="aspectFill" src="{{item.pic}}"></image></navigator>
     <view class="goods-info">
       <view class="title"><navigator url="/pages/goods-details/vop?id={{item.skuId}}">{{item.skuName}}</navigator></view>
-      <view class="price">¥ {{item.priceSale}}</view>
+      <view class="price">$ {{item.priceSale}}</view>
       <!-- <view class="buy-info">
         <view class="num">{{item.numberOrders}}人已购{{item.numberSells}}件</view>
         <image class="car" src="/images/icon/car.svg" data-id="{{item.id}}" bindtap="addShopCar"></image>

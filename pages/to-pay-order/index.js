@@ -600,7 +600,7 @@ Page({
         // 余额足够
         wx.showModal({
           title: '请确认支付',
-          content: `您当前可用余额¥${balance}，使用余额支付¥${res.data.amountReal}？`,
+          content: `您当前可用余额$${balance}，使用余额支付$${res.data.amountReal}？`,
           confirmText: "确认支付",
           cancelText: "暂不付款",
           success: res2 => {
@@ -629,7 +629,7 @@ Page({
         // 余额不够
         wx.showModal({
           title: '请确认支付',
-          content: `您当前可用余额¥${balance}，仍需支付¥${money}`,
+          content: `您当前可用余额$${balance}，仍需支付$${money}`,
           confirmText: "确认支付",
           cancelText: "暂不付款",
           success: res2 => {

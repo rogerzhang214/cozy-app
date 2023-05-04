@@ -14,12 +14,12 @@
     <view class="goods-info vcell">
       <view class="goods-info-top-container">
         <view class="goods-profile">
-          <view class="p"><text>¥</text> {{goodsDetail.basicInfo.minPrice}}</view>
+          <view class="p"><text>$</text> {{goodsDetail.basicInfo.minPrice}}</view>
           <view wx:if="{{goodsDetail.basicInfo.originalPrice && goodsDetail.basicInfo.originalPrice > 0}}" class="goods-price"
-            style='color:#aaa;text-decoration:line-through;padding: 15rpx 0rpx 0rpx 15rpx;'><text>¥</text>
+            style='color:#aaa;text-decoration:line-through;padding: 15rpx 0rpx 0rpx 15rpx;'><text>$</text>
             {{goodsDetail.basicInfo.originalPrice}}</view>
         </view>
-        <view class="goods-info-fx">
+        <!-- <view class="goods-info-fx">
           <view class='item left'>
             <van-icon name="share-o" size="24px" />
             <view class="icon-title">分享</view>
@@ -29,7 +29,7 @@
             <van-icon name="qr" size="24px" />
             <view class="icon-title">二维码</view>
           </view>
-        </view>
+        </view> -->
       </view>
       <view class="goods-title">{{goodsDetail.basicInfo.name}}</view>
       <view class="characteristic">{{goodsDetail.basicInfo.characteristic}}</view>

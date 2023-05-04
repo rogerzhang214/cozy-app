@@ -93,15 +93,15 @@
   <van-cell-group wx:if="{{apiUserInfoMap.saleDistributionTeam && (apiUserInfoMap.saleDistributionTeam.leader == apiUserInfoMap.base.id || apiUserInfoMap.saleDistributionTeam.deputyLeader == apiUserInfoMap.base.id ) }}" custom-class="cell-class" title="我的团队">
     <van-cell title="{{ apiUserInfoMap.saleDistributionTeam.name }}" />
     <van-cell title="身份" value="{{ apiUserInfoMap.saleDistributionTeam.leader == apiUserInfoMap.base.id ? '队长' : '副队长' }}" />
-    <van-cell title="销售目标" value="¥{{ apiUserInfoMap.saleDistributionTeam.standardSaleroom }}/月" />
-    <van-cell title="本月销售" value="¥{{ apiUserInfoMap.saleDistributionTeam.curSaleroom }}" />
+    <van-cell title="销售目标" value="${{ apiUserInfoMap.saleDistributionTeam.standardSaleroom }}/月" />
+    <van-cell title="本月销售" value="${{ apiUserInfoMap.saleDistributionTeam.curSaleroom }}" />
     <van-cell title="月度报表" is-link url="../report/team?teamId={{ apiUserInfoMap.base.teamId }}" />
   </van-cell-group>
 
   <!-- 城市合伙人 -->
   <van-cell-group wx:for="{{fxCities}}" wx:key="id" custom-class="cell-class" title="{{ item.provinceName }}{{ item.cityName }}合伙人">
-    <van-cell title="销售目标" value="¥{{ item.standardSaleroom }}/月" />
-    <van-cell title="本月销售" value="¥{{ item.curSaleroom }}" />
+    <van-cell title="销售目标" value="${{ item.standardSaleroom }}/月" />
+    <van-cell title="本月销售" value="${{ item.curSaleroom }}" />
     <van-cell title="月度报表" is-link url="../report/city?provinceId={{ item.provinceId }}&cityId={{ item.cityId }}" />
   </van-cell-group>
   

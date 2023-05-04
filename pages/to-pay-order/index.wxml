@@ -211,7 +211,7 @@
       <van-cell title="自动抵扣" clickable data-name="0" bind:click="deductionScoreClick">
         <van-radio slot="right-icon" name="0" />
       </van-cell>
-      <van-cell wx:for="{{scoreDeductionRules}}" wx:key="id" title="使用{{ item.score }}积分抵扣¥{{ item.money }}" clickable data-name="{{ item.score }}" bind:click="deductionScoreClick">
+      <van-cell wx:for="{{scoreDeductionRules}}" wx:key="id" title="使用{{ item.score }}积分抵扣${{ item.money }}" clickable data-name="{{ item.score }}" bind:click="deductionScoreClick">
         <van-radio slot="right-icon" name="{{ item.score }}" />
       </van-cell>
     </van-cell-group>
@@ -229,10 +229,10 @@
   </van-radio-group>
 
   <van-cell-group wx:if="{{ yunPrice || deductionMoney || couponAmount || balance }}" title="小计">
-    <van-cell wx:if="{{ yunPrice }}" title="运费" value="¥{{yunPrice}}" />
-    <van-cell wx:if="{{deductionMoney}}" title="积分抵扣" value="-¥{{deductionMoney}}" />
-    <van-cell wx:if="{{couponAmount}}" title="优惠金额" value="-¥{{couponAmount}}" />
-    <van-cell wx:if="{{order_pay_user_balance == '1' && balance}}" title="账户余额" value="¥{{balance}}" />
+    <van-cell wx:if="{{ yunPrice }}" title="运费" value="${{yunPrice}}" />
+    <van-cell wx:if="{{deductionMoney}}" title="积分抵扣" value="-${{deductionMoney}}" />
+    <van-cell wx:if="{{couponAmount}}" title="优惠金额" value="-${{couponAmount}}" />
+    <van-cell wx:if="{{order_pay_user_balance == '1' && balance}}" title="账户余额" value="${{balance}}" />
   </van-cell-group>
   <view class="bottom-box"></view>
   <van-submit-bar

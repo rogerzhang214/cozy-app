@@ -3,6 +3,6 @@
   wx:for="{{members}}" wx:key="id"
   size="large"
   title="月份{{ item.month }}"
-  label="目标¥{{ item.standardSaleroom}}"
-  value="¥{{ item.curSaleroom}}"
+  label="目标${{ item.standardSaleroom}}"
+  value="${{ item.curSaleroom}}"
 />
