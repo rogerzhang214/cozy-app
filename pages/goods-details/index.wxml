@@ -254,12 +254,12 @@
       </view>
     </block>
   </view>
-  <van-cell title="数量">
+  <!-- <van-cell title="数量">
     <view>
       <van-stepper value="{{ buyNumber }}" min="{{ buyNumMin }}" max="{{ buyNumMax }}" bind:change="stepChange" />
     </view>
-  </van-cell>
-  <van-button wx:if="{{shopType =='addShopCar'}}" bindtap="addShopCar" type="danger" block>加入车</van-button>
+  </van-cell> -->
+  <!-- <van-button wx:if="{{shopType =='addShopCar'}}" bindtap="addShopCar" type="danger" block>加入车</van-button>
   <van-button wx:if="{{shopType =='tobuy' || shopType =='toPingtuan'}}" data-shopType="{{shopType}}" bindtap="buyNow"
-    type="danger" block>立即</van-button>
+    type="danger" block>立即</van-button> -->
 </van-popup>
