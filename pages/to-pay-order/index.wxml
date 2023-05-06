@@ -10,7 +10,7 @@
   </view>
 </block>
 <block wx:if="{{ bindMobileStatus == 1 }}">
-  <block wx:if="{{ orderType != 'buyNow' }}"> <!-- 购物车 -->
+  <block wx:if="{{ orderType != 'buyNow' }}"> <!-- 车 -->
     <van-cell-group wx:for="{{shopList}}" wx:for-item="shop" wx:for-index="shopIndex" wx:key="id" title="{{ shop.name }}">
       <van-card
         wx:for="{{goodsList}}" wx:key="index"
@@ -44,7 +44,7 @@
       </view>
     </van-cell-group>
   </block>
-  <block wx:else> <!-- 立即购买 -->
+  <block wx:else> <!-- 立即 -->
     <van-card
       wx:for="{{goodsList}}" wx:key="index"
       num="{{item.number}}"

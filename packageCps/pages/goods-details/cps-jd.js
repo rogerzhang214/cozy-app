@@ -27,8 +27,8 @@ Page({
     buyNumMax: 0,
     propertyChildIds: "",
     propertyChildNames: "",
-    canSubmit: false, //  选中规格尺寸时候是否允许加入购物车
-    shopType: "addShopCar", //购物类型，加入购物车或立即购买，默认为加入购物车
+    canSubmit: false, //  选中规格尺寸时候是否允许加入车
+    shopType: "addShopCar", //类型，加入车或立即，默认为加入车
   },
   bindscroll(e) {
     if (this.data.tabclicked) {
@@ -398,7 +398,7 @@ Page({
     this.calculateGoodsPrice()
   },
   /**
-   * 组建立即购买信息
+   * 组建立即信息
    */
   buliduBuyNowInfo: function(shoptype) {
     var shopCarMap = {};

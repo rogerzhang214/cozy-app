@@ -34,7 +34,7 @@ Page({
     yunPrice: 0,
     allGoodsAndYunPrice: 0,
     goodsJsonStr: "",
-    orderType: "", //订单类型，购物车下单或立即支付下单，默认是购物车， buyNow 说明是立即购买 
+    orderType: "", //订单类型，车下单或立即支付下单，默认是车， buyNow 说明是立即 
     pingtuanOpenId: undefined, //拼团的话记录团号
 
     hasNoCoupons: true,
@@ -51,7 +51,7 @@ Page({
     bindMobileStatus: 0, // 0 未判断 1 已绑定手机号码 2 未绑定手机号码
     userScore: 0, // 用户可用积分
     deductionScore: '-1', // 本次交易抵扣的积分数， -1 为不抵扣，0 为自动抵扣，其他金额为抵扣多少积分
-    shopCarType: 0, //0自营购物车，1云货架购物车
+    shopCarType: 0, //0自营车，1云货架车
     dyopen: 0, // 是否开启订阅
     dyunit: 0, // 按天
     dyduration: 1, // 订阅间隔
@@ -99,7 +99,7 @@ Page({
     let goodsList = []
     let shopList = []
     const token = wx.getStorageSync('token')
-    //立即购买下单
+    //立即下单
     if ("buyNow" == this.data.orderType) {
       var buyNowInfoMem = wx.getStorageSync('buyNowInfo');
       this.data.kjId = buyNowInfoMem.kjId;
@@ -107,11 +107,11 @@ Page({
         goodsList = buyNowInfoMem.shopList
       }
     } else {
-      //购物车下单
-      if (this.data.shopCarType == 0) {//自营购物车
+      //车下单
+      if (this.data.shopCarType == 0) {//自营车
         var res = await WXAPI.shippingCarInfo(token)
         shopList = res.data.shopList
-      } else if (this.data.shopCarType == 1) {//云货架购物车
+      } else if (this.data.shopCarType == 1) {//云货架车
         var res = await WXAPI.jdvopCartInfo(token)
         shopList = [{
           id: 0,
@@ -227,7 +227,7 @@ Page({
     }
   },
   async createOrder(e) {
-    // shopCarType: 0 //0自营购物车，1云货架购物车
+    // shopCarType: 0 //0自营车，1云货架车
     const loginToken = wx.getStorageSync('token') // 用户登录 token
     const postData = {
       token: loginToken,
@@ -548,14 +548,14 @@ Page({
       return
     }
     if (e && "buyNow" != this.data.orderType) {
-      // 清空购物车数据
+      // 清空车数据
       const keyArrays = []
       this.data.goodsList.forEach(ele => {
         keyArrays.push(ele.key)
       })
-      if (this.data.shopCarType == 0) { //自营购物车
+      if (this.data.shopCarType == 0) { //自营车
         WXAPI.shippingCarInfoRemoveItem(loginToken, keyArrays.join())
-      } else if (this.data.shopCarType == 1) {//云货架购物车
+      } else if (this.data.shopCarType == 1) {//云货架车
         WXAPI.jdvopCartRemove(loginToken, keyArrays.join())
       }
     }

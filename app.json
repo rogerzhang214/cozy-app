@@ -59,11 +59,7 @@
     "pages/notagree/index",
     "pages/my/user-code"
   ],
-  "requiredPrivateInfos": [
-    "getLocation",
-    "chooseAddress",
-    "chooseLocation"
-  ],
+  "requiredPrivateInfos": [],
   "subpackages": [
     {
       "root": "packageStreamMedia",

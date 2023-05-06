@@ -28,8 +28,8 @@ Page({
     buyNumMax: 0,
     propertyChildIds: "",
     propertyChildNames: "",
-    canSubmit: false, //  选中规格尺寸时候是否允许加入购物车
-    shopType: "addShopCar", //购物类型，加入购物车或立即购买，默认为加入购物车
+    canSubmit: false, //  选中规格尺寸时候是否允许加入车
+    shopType: "addShopCar", //类型，加入车或立即，默认为加入车
   },
   bindscroll(e) {
     if (this.data.tabclicked) {
@@ -445,12 +445,12 @@ Page({
     this.calculateGoodsPrice()
   },
   /**
-   * 加入购物车
+   * 加入车
    */
   async addShopCar() {
     if (this.data.buyNumber < 1) {
       wx.showToast({
-        title: '请选择购买数量',
+        title: '请选择数量',
         icon: 'none'
       })
       return
@@ -479,25 +479,25 @@ Page({
 
     this.closePopupTap();
     wx.showToast({
-      title: '加入购物车',
+      title: '加入车',
       icon: 'success'
     })
     this.shippingCartInfo()
   },
   /**
-   * 立即购买
+   * 立即
    */
   buyNow(e) {
     let shoptype = e.currentTarget.dataset.shoptype
     if (this.data.buyNumber < 1) {
       wx.showModal({
         title: '提示',
-        content: '购买数量不能为0！',
+        content: '数量不能为0！',
         showCancel: false
       })
       return;
     }
-    //组建立即购买信息
+    //组建立即信息
     var buyNowInfo = this.buliduBuyNowInfo(shoptype);
     // 写入本地存储
     wx.setStorage({
@@ -510,7 +510,7 @@ Page({
     })
   },
   /**
-   * 组建立即购买信息
+   * 组建立即信息
    */
   buliduBuyNowInfo: function(shoptype) {
     var shopCarMap = {};

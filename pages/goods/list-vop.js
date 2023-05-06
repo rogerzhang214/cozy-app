@@ -172,7 +172,7 @@ Page({
         wxlogin: isLogined
       })
       if (isLogined) {
-        // 处理加入购物车的业务逻辑
+        // 处理加入车的业务逻辑
         this.addShopCarDone(options)
       }
     })

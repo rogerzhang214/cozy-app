@@ -27,13 +27,13 @@ function wxpay(type, money, orderId, redirectUrl, data, content) {
     };
   }
   if (type === 'fxsBuy') {
-    postData.remark = "购买分销资格";
+    postData.remark = "分销资格";
     postData.nextAction = {
       type: 13
     };
   }
   if (type === 'payTz') {
-    postData.remark = "购买团长 ：" + money;
+    postData.remark = "团长 ：" + money;
     postData.nextAction = {
       type: 14
     };

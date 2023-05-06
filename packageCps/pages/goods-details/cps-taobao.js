@@ -302,7 +302,7 @@ Page({
     this.calculateGoodsPrice()
   },
   /**
-   * 组建立即购买信息
+   * 组建立即信息
    */
   buliduBuyNowInfo: function(shoptype) {
     var shopCarMap = {};

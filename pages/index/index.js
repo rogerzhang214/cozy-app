@@ -205,7 +205,7 @@ Page({
     this.setData({
       shopInfo: wx.getStorageSync('shopInfo')
     })
-    // 获取购物车数据，显示TabBarBadge
+    // 获取车数据，显示TabBarBadge
     TOOLS.showTabBarBadge()
     this.goodsDynamic()
     this.miaoshaGoods()

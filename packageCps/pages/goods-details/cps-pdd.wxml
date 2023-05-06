@@ -57,7 +57,7 @@
           </view>
         </block>
       </view>
-      <van-cell title="购买数量">
+      <van-cell title="数量">
         <view>
           <van-stepper value="{{ buyNumber }}" min="{{ buyNumMin }}" max="{{ buyNumMax }}" bind:change="stepChange" />
         </view>
@@ -99,7 +99,7 @@
         send-message-title="{{goodsDetail.basicInfo.name}}" send-message-img="{{goodsDetail.basicInfo.pic}}"
         send-message-path="/packageCps/pages/goods-details/cps-pdd?id={{goodsDetail.basicInfo.id}}" show-message-card="{{ true }}" />
       <van-goods-action-icon icon="{{faved?'like':'like-o'}}" text="收藏" bind:click="addFav" />
-      <van-goods-action-button text="立即购买" data-shopType="{{shopType}}"
+      <van-goods-action-button text="立即" data-shopType="{{shopType}}"
         bind:click="tobuy" />
     </van-goods-action>
   </scroll-view>

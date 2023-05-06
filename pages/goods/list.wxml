@@ -41,8 +41,8 @@ module.exports = {
         </text></view>
       <view class="buy-info">
         <view wx:if="{{ show_seller_number == '1' }}" class="num">已售出{{item.numberSells}}件</view>
-        <van-icon wx:if="{{ item.propertyIds || item.hasAddition }}" class="car" name="add" color="#e64340" size="48rpx" data-id="{{item.id}}" bind:click="addShopCar" />
-        <van-icon wx:else class="car" name="shopping-cart-o" color="#e64340" size="48rpx" data-id="{{item.id}}" bind:click="addShopCar" />
+        <!-- <van-icon wx:if="{{ item.propertyIds || item.hasAddition }}" class="car" name="add" color="#e64340" size="48rpx" data-id="{{item.id}}" bind:click="addShopCar" />
+        <van-icon wx:else class="car" name="shopping-cart-o" color="#e64340" size="48rpx" data-id="{{item.id}}" bind:click="addShopCar" /> -->
       </view>
     </view>
   </view>
@@ -58,8 +58,8 @@ module.exports = {
       <view class="buy-info">
         <view wx:if="{{ show_seller_number == '1' }}" class="num">{{item.numberOrders}}人已购{{item.numberSells}}件</view>
         <!-- <image class="car" src="/images/icon/car.svg" data-id="{{item.id}}" bindtap="addShopCar"></image> -->
-        <van-icon wx:if="{{ item.propertyIds || item.hasAddition }}" class="car" name="add" color="#e64340" size="48rpx" data-id="{{item.id}}" bind:click="addShopCar" />
-        <van-icon wx:else class="car" name="shopping-cart-o" color="#e64340" size="48rpx" data-id="{{item.id}}" bind:click="addShopCar" />
+        <!-- <van-icon wx:if="{{ item.propertyIds || item.hasAddition }}" class="car" name="add" color="#e64340" size="48rpx" data-id="{{item.id}}" bind:click="addShopCar" />
+        <van-icon wx:else class="car" name="shopping-cart-o" color="#e64340" size="48rpx" data-id="{{item.id}}" bind:click="addShopCar" /> -->
       </view>
     </view>
   </view>

@@ -2074,7 +2074,7 @@ module.exports = (_module$exports = {
   bengenSaleTongjiRank: function bengenSaleTongjiRank(data) {
     return request('/bengenSaleTongji/rank', true, 'get', data);
   },
-  // 购买课程
+  // 课程
   courseInfoList: function courseInfoList(data) {
     return request('/courseInfo/list', true, 'post', data);
   },

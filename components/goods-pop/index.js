@@ -276,7 +276,7 @@ Component({
     },
     async addCarSku(){
       await this.calculateGoodsPrice()
-      // 加入购物车
+      // 加入车
       if (!this.data.canSubmit) {
         wx.showToast({
           title: '请选择规格/配件',
@@ -318,7 +318,7 @@ Component({
           icon: 'success'
         })
         wx.showTabBar()
-        TOOLS.showTabBarBadge() // 获取购物车数据，显示TabBarBadge
+        TOOLS.showTabBarBadge() // 获取车数据，显示TabBarBadge
         this.setData({
           skuCurGoodsShow: false
         })

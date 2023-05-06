@@ -47,9 +47,9 @@ Page({
     if (!token) {
       return
     }
-    if (this.data.shopCarType == 0) { //自营购物车
+    if (this.data.shopCarType == 0) { //自营车
       var res = await WXAPI.shippingCarInfo(token)
-    } else if (this.data.shopCarType == 1) { //云货架购物车
+    } else if (this.data.shopCarType == 1) { //云货架车
       var res = await WXAPI.jdvopCartInfo(token)
     }
     if (res.code == 0) {
@@ -199,12 +199,12 @@ Page({
     var index = e.currentTarget.dataset.index;
     var item = this.data.shippingCarInfo.items[index]
     const token = wx.getStorageSync('token')
-    if (this.data.shopCarType == 0) { //自营购物车
+    if (this.data.shopCarType == 0) { //自营车
       if (!item.stores || item.status == 1) {
         return
       }
       var res = await WXAPI.shippingCartSelected(token, item.key, !item.selected)
-    } else if (this.data.shopCarType == 1) { //云货架购物车
+    } else if (this.data.shopCarType == 1) { //云货架车
       var res = await WXAPI.jdvopCartSelect(token, item.key, !item.selected)
     }
     this.shippingCarInfo()

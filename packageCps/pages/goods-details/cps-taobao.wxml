@@ -70,7 +70,7 @@
           </view>
         </block>
       </view>
-      <van-cell title="购买数量">
+      <van-cell title="数量">
         <view>
           <van-stepper value="{{ buyNumber }}" min="{{ buyNumMin }}" max="{{ buyNumMax }}" bind:change="stepChange" />
         </view>
@@ -113,7 +113,7 @@
           {{myHelpDetail?"您已砍过":"帮TA砍"}}</van-button>
       </view>
       <view class="item" wx:else>
-        <van-button type="danger" block bind:click="tobuy">用当前价购买</van-button>
+        <van-button type="danger" block bind:click="tobuy">用当前价</van-button>
       </view>
     </view>
     <van-goods-action wx:if="{{!curGoodsKanjia}}">

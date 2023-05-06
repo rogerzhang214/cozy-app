@@ -1,5 +1,5 @@
 <template name="no-goods">
-  <van-empty description="购物车空空如也～" image="https://dcdn.it120.cc/2021/03/02/11544ab7-38ca-4570-a876-cbfd39720367.png">
+  <van-empty description="车空空如也～" image="https://dcdn.it120.cc/2021/03/02/11544ab7-38ca-4570-a876-cbfd39720367.png">
     <van-button round type="danger" size="small" class="bottom-button" bind:click="toIndexPage">
       去逛逛
     </van-button>

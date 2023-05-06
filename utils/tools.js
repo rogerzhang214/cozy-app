@@ -1,6 +1,6 @@
 const WXAPI = require('apifm-wxapi')
 
-// 显示购物车tabBar的Badge
+// 显示车tabBar的Badge
 async function showTabBarBadge(noTabBarPage){
   const token = wx.getStorageSync('token')
   if (!token) {
@@ -12,7 +12,7 @@ async function showTabBarBadge(noTabBarPage){
   if (res.code == 0) {
     number += res.data.number
   }
-  // vop 购物车
+  // vop 车
   res = await WXAPI.jdvopCartInfo(token)
   if (res.code == 0) {
     number += res.data.number
